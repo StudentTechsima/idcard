@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800|Raleway:400,300,200,500,700,600,800|Trirong:100,200,300,400,500,600,700,800,900);
+.form .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+}
+
+.form form label {
+    font-weight: bold;
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    font-family: 'Trirong', serif;
+    font-weight: 500;
+    line-height: 1.42857143;
+    color: #333333;
+}
