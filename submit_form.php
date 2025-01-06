@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "abpa");
+include 'connection.php';
 if (!$conn) {
     echo json_encode(["status" => "error", "message" => "Database connection failed."]);
     exit;
@@ -33,11 +33,11 @@ $expiry_date = date('Y-m-d', strtotime('+1 year'));
 if (empty($firstname)) $errors['first-name'] = "First name is required.";
 if (empty($lastname)) $errors['last-name'] = "Last name is required.";
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = "Invalid email format.";
-if (strlen($phone) == 10 || strlen($phone) == 12) $errors['phone'] = "Phone number must be at least 10 digits.";
+if (strlen($phone) < 10) $errors['phone'] = "Phone number must be at least 10 digits.";
 if (empty($dob)) $errors['dob'] = "Date of birth is required.";
 if (empty($gender)) $errors['gender'] = "Gender is required.";
 if (empty($blood)) $errors['blood-group'] = "Blood Group is required.";
-if (strlen($whatsapp) == 10 || strlen($whatsapp) == 12) $errors['whatsapp'] = "Whatsapp number must be at least 10 digits.";
+if (strlen($whatsapp) < 10) $errors['whatsapp'] = "Whatsapp number must be at least 10 digits.";
 if (empty($nationality)) $errors['nationality'] = "Nationality is required.";
 if (empty($address)) $errors['address'] = "Address is required.";
 if (empty($state)) $errors['state'] = "State is required.";

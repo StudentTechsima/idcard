@@ -1,6 +1,5 @@
 <?php
-session_start();
-$conn = mysqli_connect("localhost", "root", "", "abpa");
+include 'connection.php';
 if (!$conn) {
     echo json_encode(["status" => "error", "message" => "Database connection failed."]);
     exit;

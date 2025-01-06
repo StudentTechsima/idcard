@@ -105,7 +105,7 @@ if (!isset($_SESSION['user_id'])) {
     include 'connection.php';
     $id = $_SESSION['user_id'];
     $sql = "Select * from users where id=$id";
-    $data = mysqli_query($con,$sql);
+    $data = mysqli_query($conn,$sql);
     if(mysqli_num_rows($data)>0){
         $result = mysqli_fetch_assoc($data);
     }
