@@ -114,15 +114,35 @@ if (!isset($_SESSION['letter_id'])) {
             <p>For more details, visit <a href="https://jagritinews.com/" target="_blank">© 2023 Reserved Jagriti News </a></p>
         </div>
     </div>
-    <button id="btn-generate">Download</button>
+    <button id="btn-generate" onclick="Convert_HTML_To_PDF();">Download</button>
     <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
+window.jsPDF = window.jspdf.jsPDF;
+function Convert_HTML_To_PDF() {
+	var doc = new jsPDF();
+	var elementHTML = document.querySelector("#pdf-content");
+	doc.html(elementHTML, {
+		callback: function(doc) {
+			doc.save('document-html.pdf');
+		},
+		margin: [10, 10, 10, 10],
+		autoPaging: 'text',
+		x: 0,
+		y: 0,
+		width: 190, // Target width in the PDF document
+		windowWidth: 675 // Window width in CSS pixels
+	});
+}
+</script>
+    <!-- <script>
         var buttonElement = document.querySelector("#btn-generate");
         buttonElement.addEventListener('click', function() {
             var pdfContent = document.querySelector("#pdf-content");
             html2pdf().from(pdfContent).save('joining_letter');
         });
-    </script>
+    </script> -->
 </body>
 </html>
