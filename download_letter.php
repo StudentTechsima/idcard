@@ -16,17 +16,17 @@
                 <h6 class="mb-3">Download Member ID Card</h6>
                 <hr>
             </div>
-            <form id="idCardForm">
+            <form id="downloadLetterForm">
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone No:</label>
-                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number">
+                    <label for="phone" class="form-label">Ref. No:</label>
+                    <input type="text" id="refno" name="refno" class="form-control" placeholder="Enter your phone number">
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="dob" class="form-label">Date Of Birth:</label>
                     <input type="date" id="dob" name="dob" class="form-control">
-                </div>
+                </div> -->
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-success">Download ID Card</button>
+                    <button type="submit" class="btn btn-success">Download Joining Letter</button>
                 </div>
             </form>
             <div id="message" class="mt-3"></div>
@@ -36,11 +36,11 @@
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function () {
-            $('#idCardForm').submit(function (event) {
+            $('#downloadLetterForm').submit(function (event) {
                 event.preventDefault();
                 $('#message').html('');
                 $.ajax({
-                    url: 'card.php',
+                    url: 'download_joining_letter.php',
                     type: 'POST',
                     data: $(this).serialize(),
                     success: function (response) {
@@ -48,7 +48,7 @@
                             let result = JSON.parse(response);
                             if (result.status === "success") {
                                 $('#message').html('<div class="alert alert-success">' + result.message + '</div>');
-                                window.location.href = 'design.php';
+                                window.location.href = 'joining_letter.php';
                             } else {
                                 $('#message').html('<div class="alert alert-danger">' + result.message + '</div>');
                             }

@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+session_start();
 if (!$conn) {
     echo json_encode(["status" => "error", "message" => "Database connection failed."]);
     exit;
