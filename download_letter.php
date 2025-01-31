@@ -13,7 +13,7 @@
             <div class="text-center mb-3">
                 <img src="images/logo.png" alt="ABPA Logo" class="img-fluid mb-4" ">
                
-                <h6 class="mb-3">Download Member ID Card</h6>
+                <h6 class="mb-3">Download Member Joining Letter</h6>
                 <hr>
             </div>
             <form id="downloadLetterForm">
@@ -21,10 +21,6 @@
                     <label for="phone" class="form-label">Ref. No:</label>
                     <input type="text" id="refno" name="refno" class="form-control" placeholder="Enter your phone number">
                 </div>
-                <!-- <div class="mb-3">
-                    <label for="dob" class="form-label">Date Of Birth:</label>
-                    <input type="date" id="dob" name="dob" class="form-control">
-                </div> -->
                 <div class="d-grid">
                     <button type="submit" class="btn btn-success">Download Joining Letter</button>
                 </div>

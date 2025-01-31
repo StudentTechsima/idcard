@@ -120,23 +120,23 @@ if (!isset($_SESSION['letter_id'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
-window.jsPDF = window.jspdf.jsPDF;
-function Convert_HTML_To_PDF() {
-	var doc = new jsPDF();
-	var elementHTML = document.querySelector("#pdf-content");
-	doc.html(elementHTML, {
-		callback: function(doc) {
-			doc.save('document-html.pdf');
-		},
-		margin: [10, 10, 10, 10],
-		autoPaging: 'text',
-		x: 0,
-		y: 0,
-		width: 190, // Target width in the PDF document
-		windowWidth: 675 // Window width in CSS pixels
-	});
-}
-</script>
+    window.jsPDF = window.jspdf.jsPDF;
+    function Convert_HTML_To_PDF() {
+        var doc = new jsPDF();
+        var elementHTML = document.querySelector("#pdf-content");
+        doc.html(elementHTML, {
+            callback: function(doc) {
+                doc.save('joining-letter.pdf');
+            },
+            margin: [10, 10, 10, 10],
+            autoPaging: 'text',
+            x: 0,
+            y: 0,
+            width: 190, // Target width in the PDF document
+            windowWidth: 675 // Window width in CSS pixels
+        });
+    }
+    </script>
     <!-- <script>
         var buttonElement = document.querySelector("#btn-generate");
         buttonElement.addEventListener('click', function() {

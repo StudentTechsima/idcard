@@ -113,7 +113,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="outer" id="pdf-content">
         <div class="inner">
           <div class="logo">
-             <img src="certificate/<?= $result['certificate']?>" alt="">
+             <img src="images/logo.png" alt="">
           </div>
           <div class="text">
             <h1>स्वास्थ विभाग</h1>
@@ -126,8 +126,8 @@ if (!isset($_SESSION['user_id'])) {
           <div class="img-box"><img height="100%" width="100%" src="profile/<?= $result['profile_image']?>"></div>
           <h4>E.H.R.M.S. CODE :</h4>
           <ul>
-            <li>नाम : <?= $result['firstname']." ".$result['lastname']?></li>
-            <li>पदनाम : <?= $result['profession']?></li>
+            <li>नाम : <?= $result['name']?></li>
+            <li>पदनाम : <?= $result['post']?></li>
             <li>जन्मतिथि : <?= $result['dob']?></li>
             <li>मोबाइल नं.: <?= $result['phone']?></li>
             <li>पता : <?= $result['address']?></li>
@@ -144,7 +144,7 @@ if (!isset($_SESSION['user_id'])) {
     var buttonElement = document.querySelector("#btn-generate");
     buttonElement.addEventListener('click', function() {
         var pdfContent = document.querySelector("#pdf-content");
-        html2pdf().from(pdfContent).save('health');
+        html2pdf().from(pdfContent).save('Id-Card');
     });
 </script>
 </body>

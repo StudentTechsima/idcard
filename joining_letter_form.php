@@ -11,6 +11,7 @@
 
 <body class="bg-white">
     <div class="container py-5">
+        <h2 class="text-center joining-heading">Fill Joining Letter Form</h2>
         <form class="row" enctype="multipart/form-data">
             <div class="col-lg-3"></div>
             <div class="col-lg-6 form p-4 bg-light rounded-3">

@@ -10,52 +10,38 @@
 <body class="bg-white">
     <div class="container py-5"> 
         <form class="row" enctype="multipart/form-data">
-            <div class="col-lg-9 form">
-                <div class=" mb-4">
-                    <img src="images/logo.png" alt="ABPA Logo" class="img-fluid mb-4" width="300" >
-                    <h1 class="h3 mt-3 mb-0">ABPA Member Registration - Join Now</h1>
-                    <hr class="m-0  text-secondary">
+            <div class="col-lg-12 form">
+                <div class="logo-agency mb-4">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-4" >
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="first-name" class="form-label">First Name*</label>
-                        <input type="text" id="first-name" name="firstname" class="form-control">
+                        <label for="name" class="form-label">Name*</label>
+                        <input type="text" id="name" name="name" class="form-control">
                     </div>
                     <div class="col-md-6  mb-3">
-                        <label for="last-name" class="form-label">Last Name*</label>
-                        <input type="text" id="last-name" name="lastname" class="form-control" >
+                        <label for="f_name" class="form-label">Father's Name*</label>
+                        <input type="text" id="f_name" name="f_name" class="form-control" >
                     </div>
                     <div class="col-md-6  mb-3">
-                        <label for="gender" class="form-label">Gender*</label>
-                        <select id="gender" name="gender" class="form-select" >
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="dob" class="form-label">DOB*</label>
+                        <label for="dob" class="form-label">Date Of Birth*</label>
                         <input type="date" id="dob" name="dob" class="form-control" >
                     </div>
                     <div class="col-md-6  mb-3">
-                        <label for="blood-group" class="form-label">Blood Group</label>
-                        <input type="text" id="blood-group" name="blood_group" class="form-control">
+                        <label for="post" class="form-label">Post*</label>
+                        <input type="text" id="post" name="post" class="form-control">
                     </div>
                     <div class="col-md-6  mb-3">
                         <label for="email" class="form-label">Email*</label>
                         <input type="email" id="email" name="email" class="form-control" >
                     </div>
                     <div class="col-md-6  mb-3">
-                        <label for="phone" class="form-label">Phone*</label>
+                        <label for="phone" class="form-label">Mobile Number*</label>
                         <input type="text" id="phone" name="phone" class="form-control" >
                     </div>
                     <div class="col-md-6  mb-3">
-                        <label for="whatsapp" class="form-label">WhatsApp Number</label>
-                        <input type="text" id="whatsapp" name="whatsapp" class="form-control">
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="nationality" class="form-label">Nationality</label>
-                        <input type="text" id="nationality" name="nationality" class="form-control" value="Indian">
+                        <label for="nationality" class="form-label">Work Area*</label>
+                        <input type="text" id="work_area" name="work_area" class="form-control" value="Indian">
                     </div>
                     <div class="col-md-6  mb-3">
                         <label for="address" class="form-label">Address*</label>
@@ -63,87 +49,48 @@
                     </div>
                     <div class="col-md-6  mb-3">
                         <label for="state" class="form-label">State*</label>
-                        <select id="state" name="state" class="form-select" >
+                        <select id="state" name="state" class="form-select form-control " >
                             <option value="">Select State</option>
                             <option value="up">Uttar pradesh</option>
                         </select>
                     </div>
                     <div class="col-md-6  mb-3">
                         <label for="district" class="form-label">District*</label>
-                        <select id="district" name="district" class="form-select" >
+                        <select id="district" name="district" class="form-select form-control" >
                             <option value="">Select District</option>
                             <option value="ayodhya">Ayodhya</option>
                         </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" id="city" name="city" class="form-control">
                     </div>
                     <div class="col-md-6 mb-3 ">
                         <label for="zip" class="form-label">Pin/Zip Code*</label>
                         <input type="text" id="zip" name="zip" class="form-control" >
                     </div>
+                   
                     <div class="col-md-6  mb-3">
-                        <label for="qualification" class="form-label">Qualification*</label>
-                        <select id="qualification" name="qualification" class="form-select" >
-                            <option value="">Select Qualification</option>
-                            <option value="12th">12th</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="specialization" class="form-label">Specialization*</label>
-                        <input type="text" id="specialization" name="specialization" class="form-control" >
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="profession" class="form-label">Profession*</label>
-                        <select id="profession" name="profession" class="form-select" >
-                            <option value="">Select Profession</option>
-                            <option value="pharmasist">Pharmasist</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="wings" class="form-label">Wings*</label>
-                        <select id="wings" name="wings" class="form-select" >
-                            <option value="">Select Wings</option>
-                            <option value="test">Test wings</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="join-as" class="form-label">Join As*</label>
-                        <select id="join-as" name="join_as" class="form-select" >
-                            <option value="">Select Join As</option>
-                            <option value="pharma">Pharma</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6  mb-3">
-                        <label for="pharmacist-id" class="form-label">Registered Pharmacist Number or Student
-                            ID*</label>
-                        <input type="text" id="pharmacist-id" name="pharmacist_id" class="form-control" >
-                    </div>
-                </div>
-                <div class="col-12  mb-3">
-                    <label for="profile-image" class="form-label">Profile Image* </label><span class="text-danger">(max size 50 KB -upload only .jpg)</span>
-                    <input type="file" id="profile-image" name="profile_image" class="form-control" accept=".jpg"
+                        <label for="aadhaar" class="form-label">Aadhaar Number*</label>
+                        <input type="text" id="aadhaar" name="aadhaar" class="form-control" >
+                    </div>              
+                <div class="col-md-6  mb-3">
+                    <label for="profile-image" class="form-label">Profile Picture* </label><span class="text-danger">(max size 50 KB -upload only .jpg)</span>
+                    <input type="file" id="profile_image" name="profile_image" class="form-control" accept=".jpg"
                         >
                 </div>
-                <div class="col-12  mb-3">
-                    <label for="certificate" class="form-label">Registered Pharmacist Certificate or Student
-                        Certificate* </label><span class="text-danger">(max size 100 KB - upload only .jpg)</span>
-                    <input type="file" id="certificate" name="certificate" class="form-control" accept=".jpg" >
+                <div class="col-md-6  mb-3">
+                    <label for="payament_ss" class="form-label">Payment Screenshot* </label><span class="text-danger">(max size 100 KB - upload only .jpg)</span>
+                    <input type="file" id="payament_ss" name="payament_ss" class="form-control" accept=".jpg" >
                 </div>
                 <div class="col-md-6  mb-3">
-                    <label for="member-fees " class="form-label">Member Fees*</label><span class="text-danger">(Rs. 551/- for One Year)</span>
-                    <input type="text" id="member-fees" name="member_fees" class="form-control" readonly value="551">
+                    <label for="aadhaar_card_picture" class="form-label">Aadhaar Card Picture* </label><span class="text-danger">(max size 100 KB - upload only .jpg)</span>
+                    <input type="file" id="aadhaar_card_picture" name="aadhaar_card_picture" class="form-control" accept=".jpg" >
+                </div>
+                <div class="payment-qr py-4">
+                    <img src="" alt="payment qr">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-success">Pay Now</button>
-                </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class=" text-start">
-                        <h3 class="mb-2">Membership Fee: Rs. 551/- only for One Year</h3>
-                        <img src="images/razorpay_logo.jpg" alt="Pay Online via Razorpay" class="img-fluid">
+                        <button type="submit" class="btn btn-outline-success btn-lg">Submit</button>
                     </div>
+                    
+                </div>
                 </div>
         </form>
     </div>
