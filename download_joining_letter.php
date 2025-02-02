@@ -10,14 +10,14 @@ if (empty($refno)) {
     echo json_encode(["status" => "error", "message" => "Both fields are required."]);
     exit;
 }
-$sql = "SELECT * FROM joining_letter WHERE refno = '$refno'";
+$sql = "SELECT * FROM joining_letter WHERE refno = '$refno' && status='approved'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);
     $_SESSION['letter_id'] = $user['id'];
     echo json_encode(["status" => "success", "message" => "Your Joining Letter generated!"]);
 } else {
-    echo json_encode(["status" => "error", "message" => "User not found."]);
+    echo json_encode(["status" => "error", "message" => "User not found or your joining letter not approved"]);
 }
 mysqli_close($conn);
 ?>

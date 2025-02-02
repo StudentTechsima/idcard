@@ -15,12 +15,12 @@ $sql = "SELECT * FROM id_card WHERE phone = '$phone'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);
-    if ($dob == $user['dob']) {
+    if ($dob == $user['dob'] && $user['status']=='approved') {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_email'] = $user['email'];
         echo json_encode(["status" => "success", "message" => "Login successful!"]);
     } else {
-        echo json_encode(["status" => "error", "message" => "Incorrect password."]);
+        echo json_encode(["status" => "error", "message" => "Incorrect DOB or Your Id Card Not Approved."]);
     }
 } else {
     echo json_encode(["status" => "error", "message" => "User not found."]);
