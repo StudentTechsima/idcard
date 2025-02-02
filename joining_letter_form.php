@@ -57,31 +57,28 @@
                         <input type="date" id="date" class="form-control" name="date">
                     </div>
            </div>
-
-        </form>
-           
-                    
-                    
-                    
-                    
-                    
-                    <div class="mb-3">
+            <div class="col-lg-6">
+            <div class="mb-3">
                         <label for="address" class="form-label">Interview Date*</label>
                         <input type="date" id="int_date" class="form-control" name="int_date">
                     </div>
-                    <div class="mb-3">
+            </div>
+            <div class="col-lg-6">
+            <div class="mb-3">
                         <label for="address" class="form-label">Time*</label>
                         <input type="time" id="time" class="form-control" name="time">
                     </div>
-                    <div class="mb-3">
+            </div>
+            <div class="col-lg-6">
+            <div class="mb-3">
                         <label for="address" class="form-label">Venue*</label>
                         <textarea id="venue" id="venue" name="venue" class="form-control" rows="3"></textarea>
                     </div>
-                    <div class="col-12">
+            </div>
+            <div class="col-12">
                         <button type="submit" class="btn btn-success">Apply For Joining Letter</button>
-                    </div>                   
-                
-        <form>
+                    </div>
+        </form>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
