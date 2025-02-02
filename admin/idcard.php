@@ -1,11 +1,10 @@
 <?php
 include 'layout/header.php';
 ?>
-<div class="main-panel">
+<div class="main-panel"   style="overflow:auto">
     <div class="content">
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <h4 class="page-title">Id Cards</h4>
-            <div class="row">
                 <table class="table table-success table-striped">
                     <thead>
                         <tr>

@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download ID Card</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-    <div class="container d-flex justify-content-center align-items-center vh-100">
+<?php
+include 'layout/header.php';
+?>
+<body>
+    <div class="container d-flex justify-content-center align-items-center py-5">
         <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
-            <div class="logo-agency mx-auto mb-3">
-                <img src="images/logo.png" alt=" Logo" class="img-fluid mb-4" ">              
-            </div>
-            <h6 class="mb-0 text-center">Download  ID Card</h6>
+            <h6 class="mb-0 text-center fs-3">Download  ID Card</h6>
                 <hr>
             <form id="idCardForm">
                 <div class="mb-3">
@@ -26,7 +16,7 @@
                     <input type="date" id="dob" name="dob" class="form-control">
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-success">Download ID Card</button>
+                    <button type="submit" class="btn btn-success  text-uppercase">Download Now</button>
                 </div>
             </form>
             <div id="message" class="mt-3"></div>

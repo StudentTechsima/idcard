@@ -5,61 +5,10 @@ if (!isset($_SESSION['letter_id'])) {
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code of Conduct Bureau Letter</title>
-    <style>
-        
-        .container {
-            max-width: 800px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border:2px solid #741b16;
-        }
-       h3,h4 {
-            color: #741b16;
-            text-align: center;
-        }
-        .logo {
-            display: block;
-            margin: 0 auto;
-            width: 100px;
-        }
-        .letter-content {
-            line-height: 1.6;
-            padding:10px 30px;
-        }
-        .from-content-header{
-            display:flex;
-            align-items:start   ;
-            justify-content:space-between;
-        }
-        .sign{
-            text-align:center;
-        }
-        .footer {
-            height: 60px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background: #741b16;
-            align-items: center;
-            margin-top: 20px;
-            font-size: 14px;
-            text-align: center;
-            color: #ffffff;
-            padding:0px;
-        }
-        .footer a{
-            color:#fff;
-            text-decoration:none;
-            cursor:pointer;
-        }
-    </style>
-</head>
+<?php
+include 'layout/header.php';
+?>
+
 <body>
 <?php
     include 'connection.php';
@@ -70,6 +19,9 @@ if (!isset($_SESSION['letter_id'])) {
         $result = mysqli_fetch_assoc($data);
     }
     ?>
+    <div class="d-flex justify-content-center mb-2 ">
+    <button id="btn-generate" class="text-uppercase" onclick="Convert_HTML_To_PDF();">print</button>
+    </div>
     <div class="container" id="pdf-content">
         <img src="images/logo.png" alt="CCB Logo" class="logo">
         <div class="letter-content">
@@ -114,7 +66,7 @@ if (!isset($_SESSION['letter_id'])) {
             <p>For more details, visit <a href="https://jagritinews.com/" target="_blank">© 2023 Reserved Jagriti News </a></p>
         </div>
     </div>
-    <button id="btn-generate" onclick="Convert_HTML_To_PDF();">Download</button>
+    
     <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

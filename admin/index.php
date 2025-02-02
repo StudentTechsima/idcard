@@ -7,6 +7,7 @@ include 'layout/header.php';
             <h4 class="page-title">Dashboard</h4>
             <div class="row">
                 <div class="col-md-3">
+                <a href="idcard.php">
                     <div class="card card-stats card-warning">
                         <div class="card-body ">
                             <div class="row">
@@ -32,8 +33,11 @@ include 'layout/header.php';
                             </div>
                         </div>
                     </div>
+                 </a>
                 </div>
+               
                 <div class="col-md-3">
+                <a href="joining_letter.php">
                     <div class="card card-stats card-success">
                         <div class="card-body ">
                             <div class="row">
@@ -58,7 +62,9 @@ include 'layout/header.php';
                             </div>
                         </div>
                     </div>
-                </div>               
+                    </a>   
+                </div> 
+                           
             </div>
         </div>
     </div>
