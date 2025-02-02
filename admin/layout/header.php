@@ -97,19 +97,13 @@
 					</div>
 					<ul class="nav">
 						<li class="nav-item active">
-							<a href="dashboard.php">
+							<a href="index.php">
 								<i class="la la-dashboard"></i>
 								<p>Dashboard</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="users.php">
-								<i class="la la-keyboard-o"></i>
-								<p>Users</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="id_form.php">
+							<a href="idcard.php">
 								<i class="la la-keyboard-o"></i>
 								<p>Id Card</p>
 							</a>

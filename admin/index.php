@@ -16,9 +16,16 @@ include 'layout/header.php';
                                     </div>
                                 </div>
                                 <div class="col-7 d-flex align-items-center">
-                               
-                                    <div class="numbers">
                                     
+                                    <div class="numbers">
+                                        <?php
+                                        $sql = "select count(*) as idcard from users";
+                                        $count = mysqli_query($conn,$sql);
+                                        if(mysqli_num_rows($count)>0){
+                                            $idcard = mysqli_fetch_assoc($count);
+                                            echo $idcard['idcard'];
+                                        }
+                                        ?>
                                         <p class="card-category">ID CARD</p>
                                     </div>
                                 </div>
@@ -37,6 +44,14 @@ include 'layout/header.php';
                                 </div>
                                 <div class="col-7 d-flex align-items-center">
                                     <div class="numbers">
+                                    <?php
+                                        $sql = "select count(*) as joinletter from joining_letter";
+                                        $count = mysqli_query($conn,$sql);
+                                        if(mysqli_num_rows($count)>0){
+                                            $join = mysqli_fetch_assoc($count);
+                                            echo $join['joinletter'];
+                                        }
+                                        ?>
                                         <p class="card-category">JOINING LETTER</p>
                                     </div>
                                 </div>
