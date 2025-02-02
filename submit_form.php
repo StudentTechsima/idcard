@@ -54,7 +54,7 @@ if (!empty($errors)) {
     exit;
 }
 
-$sql = "INSERT INTO users (name, f_name,email, phone,dob,post,work_area,
+$sql = "INSERT INTO id_card (name, f_name,email, phone,dob,post,work_area,
 address,state,district,pin,aadhaar,profile_image,payament_ss,
 aadhaar_card_picture) 
         VALUES ('$name', '$f_name', '$email','$phone','$dob','$post', '$work_area',

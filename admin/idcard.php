@@ -32,7 +32,7 @@ include 'layout/header.php';
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "Select * from users";
+                        $sql = "Select * from id_card";
                         $data = mysqli_query($conn,$sql);
                         if(mysqli_num_rows($data)>0){
                             while($row=mysqli_fetch_assoc($data)){

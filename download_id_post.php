@@ -11,7 +11,7 @@ if (empty($phone) || empty($dob)) {
     echo json_encode(["status" => "error", "message" => "Both fields are required."]);
     exit;
 }
-$sql = "SELECT * FROM users WHERE phone = '$phone'";
+$sql = "SELECT * FROM id_card WHERE phone = '$phone'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);

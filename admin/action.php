@@ -3,7 +3,7 @@ include 'layout/header.php';
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     if($_GET['type']=="carddel"){
-        $sql = "Delete from users where id=$id";
+        $sql = "Delete from id_card where id=$id";
         if(mysqli_query($conn,$sql)){
             echo "<script>
                 alert('Id Card Deleted.');
@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
             </script>";
         }
     }elseif($_GET['type']=="cardapp"){
-        $sql = "Update users set status='approved' where id=$id";
+        $sql = "Update id_card set status='approved' where id=$id";
         if(mysqli_query($conn,$sql)){
             echo "<script>
                 alert('Id Card Approved.');
@@ -19,7 +19,7 @@ if(isset($_GET['id'])){
             </script>";
         }
     }elseif($_GET['type']=="cardrej"){
-        $sql = "Update users set status='rejected' where id=$id";
+        $sql = "Update id_card set status='rejected' where id=$id";
         if(mysqli_query($conn,$sql)){
             echo "<script>
                 alert('Id Card Rejected.');

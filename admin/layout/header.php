@@ -1,7 +1,10 @@
 <?php
    ob_start();
    include '../connection.php';
-//    session_start();
+   session_start();
+   if(!isset($_SESSION['role']) && $_SESSION['role']!='admin'){
+		header("Location:../login.php");
+   }
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,24 +43,21 @@
 					</form>
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >ayansh</span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span ><?= $_SESSION['name']?></span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
 										<div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
 										<div class="u-text">
 											<h4>Jagriti News</h4>
-											<p class="text-muted">hello@pestkita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+											<p class="text-muted"><?= $_SESSION['email']?></p><a href="profile.php" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
 										</div>
 									</li>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a>
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="../logout.php"><i class="fa fa-power-off"></i> Logout</a>
+									<a class="dropdown-item" href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
 								</ul>
-								<!-- /.dropdown-user -->
 							</li>
 						</ul>
 					</div>
@@ -86,11 +86,6 @@
 											<span class="link-collapse">My Profile</span>
 										</a>
 									</li>
-									<li>
-										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
 								</ul>
 							</div>
 						</div>
@@ -100,6 +95,12 @@
 							<a href="index.php">
 								<i class="la la-dashboard"></i>
 								<p>Dashboard</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="users.php">
+								<i class="la la-keyboard-o"></i>
+								<p>Users</p>
 							</a>
 						</li>
 						<li class="nav-item">

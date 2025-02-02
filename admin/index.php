@@ -19,7 +19,7 @@ include 'layout/header.php';
                                     
                                     <div class="numbers">
                                         <?php
-                                        $sql = "select count(*) as idcard from users";
+                                        $sql = "select count(*) as idcard from id_card";
                                         $count = mysqli_query($conn,$sql);
                                         if(mysqli_num_rows($count)>0){
                                             $idcard = mysqli_fetch_assoc($count);
