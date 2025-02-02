@@ -91,12 +91,12 @@ if (!isset($_SESSION['user_id'])) {
         }
         .sign{
             display: flex;
-        justify-content: space-around;
-        margin: 20px 0px;
+            justify-content: space-around;
+            margin: 20px 0px;
     }
     .sign p{
         font-size: 14px;
-    font-weight: 600;
+        font-weight: 600;
     }
     </style>
 </head>

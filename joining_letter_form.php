@@ -10,31 +10,61 @@
 </head>
 
 <body class="bg-white">
-    <div class="container py-5">
-        <h2 class="text-center joining-heading">Fill Joining Letter Form</h2>
+<header class="container">
+        <div class="form-header d-flex justify-content-between align-items-center">
+                <div class="logo-agency mb-4">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-4" >
+                </div>
+                <div class="download-btn">
+                     <a  class="btn btn-outline-success text-uppercase me-3" href="download_id.php">Download Id Card</a>
+                     <a  class="btn btn-outline-success text-uppercase me-3" href="joining_letter_form.php">APPLY JOINING Letter</a>
+                     <a class="btn btn-outline-success text-uppercase" href="download_letter.php">Download Joining Letter</a>
+                </div>
+                    
+                </div>                
+
+</header>
+    <div class="container p-5 bg-light rounded-3">    
         <form class="row" enctype="multipart/form-data">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-6 form p-4 bg-light rounded-3">
-                    <div class="mb-3">
+        <h2 class="text-center text-uppercase bg-danger rounded-pill py-2 mb-3"><span class="text-white">Apply</span><span  class="text-info"> Joining Letter</span></h2>
+        <form>
+        <div class="col-lg-6">
+        <div class="mb-3">
                         <label for="address" class="form-label">Name*</label>
                         <input type="text" id="name" name="name" class="form-control">
-                    </div>
-                    <div class="mb-3">
+                    </div> 
+        </div>
+        <div class="col-lg-6">
+        <div class="mb-3">
                         <label for="address" class="form-label">Post*</label>
                         <textarea id="post" id="post" name="post" class="form-control" rows="3"></textarea>
                     </div>
-                    <div class="mb-3">
+</div><div class="col-lg-6">
+           <div class="mb-3">
                         <label for="address" class="form-label">Address*</label>
                         <textarea id="address" name="address" class="form-control" rows="3"></textarea>
                     </div>
-                    <div class="mb-3">
+           </div>
+           <div class="col-lg-6">
+           <div class="mb-3">
                         <label for="address" class="form-label">Ref No.*</label>
                         <input type="text" id="refno" name="refno" class="form-control">
                     </div>
-                    <div class="mb-3">
+           </div>
+           <div class="col-lg-6">
+           <div class="mb-3">
                         <label for="address" class="form-label">Date*</label>
                         <input type="date" id="date" class="form-control" name="date">
                     </div>
+           </div>
+
+        </form>
+           
+                    
+                    
+                    
+                    
+                    
                     <div class="mb-3">
                         <label for="address" class="form-label">Interview Date*</label>
                         <input type="date" id="int_date" class="form-control" name="int_date">
@@ -50,7 +80,7 @@
                     <div class="col-12">
                         <button type="submit" class="btn btn-success">Apply For Joining Letter</button>
                     </div>                   
-                <div class="col-lg-3"></div>
+                
         <form>
     </div>
     <!-- Bootstrap JS -->

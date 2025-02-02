@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABPA Member Registration</title>
+    <title>ID Card</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-white">
-    <div class="container py-5"> 
-        <form class="row" enctype="multipart/form-data">
-            <div class="col-lg-12 form">
+    <header class="container">
+        <div class="form-header d-flex justify-content-between align-items-center">
                 <div class="logo-agency mb-4">
                     <img src="images/logo.png" alt="Logo" class="img-fluid mb-4" >
                 </div>
+                <div class="download-btn">
+                     <a  class="btn btn-outline-success text-uppercase me-3" href="download_id.php">Download Id Card</a>
+                     <a  class="btn btn-outline-success text-uppercase me-3" href="joining_letter_form.php">APPLY JOINING Letter</a>
+                     <a class="btn btn-outline-success text-uppercase" href="download_letter.php">Download Joining Letter</a>
+                </div>
+                    
+                </div>                
+
+</header>
+    <div class="container p-5 bg-light rounded-4"> 
+        <h2 class="text-center text-uppercase bg-danger rounded-pill py-2 mb-3"><span class="text-white">Apply</span><span  class="text-info"> Id Card</span></h2>
+        <form class="row" enctype="multipart/form-data">
+            <div class="col-lg-12 form">
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="name" class="form-label">Name*</label>
@@ -71,25 +83,23 @@
                         <input type="text" id="aadhaar" name="aadhaar" class="form-control" >
                     </div>              
                 <div class="col-md-6  mb-3">
-                    <label for="profile-image" class="form-label">Profile Picture* </label><span class="text-danger">(max size 50 KB -upload only .jpg)</span>
+                    <label for="profile-image" class="form-label">Profile Picture* </label>
                     <input type="file" id="profile_image" name="profile_image" class="form-control" accept=".jpg"
                         >
                 </div>
                 <div class="col-md-6  mb-3">
-                    <label for="payament_ss" class="form-label">Payment Screenshot* </label><span class="text-danger">(max size 100 KB - upload only .jpg)</span>
+                    <label for="payament_ss" class="form-label">Payment Screenshot* </label>
                     <input type="file" id="payament_ss" name="payament_ss" class="form-control" accept=".jpg" >
                 </div>
                 <div class="col-md-6  mb-3">
-                    <label for="aadhaar_card_picture" class="form-label">Aadhaar Card Picture* </label><span class="text-danger">(max size 100 KB - upload only .jpg)</span>
+                    <label for="aadhaar_card_picture" class="form-label">Aadhaar Card Picture* </label>
                     <input type="file" id="aadhaar_card_picture" name="aadhaar_card_picture" class="form-control" accept=".jpg" >
-                </div>
-                <div class="payment-qr py-4">
-                    <img src="" alt="payment qr">
                 </div>
                 <div class="col-12">
                         <button type="submit" class="btn btn-outline-success btn-lg">Submit</button>
                     </div>
                     
+                </div>
                 </div>
                 </div>
         </form>
